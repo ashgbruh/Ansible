@@ -1,0 +1,9 @@
+---
+- name: install Apache2
+  hosts: host1
+  become: true
+  become_user: root
+  gather_facts: true
+  tasks:
+    - name: "Install apache2"
+      package: name=apache2 state=present
