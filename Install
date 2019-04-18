@@ -1,0 +1,35 @@
+Spin up an ec2 Ubuntu server
+
+example : ssh -i "host1.pem" ubuntu@ec2-18-130-29-98.eu-west-2.compute.amazonaws.com
+
+Create SSH connections between Controller machine and host machine
+
+Note: **Python2 needs to installed on host machine**
+
+to create ssh keys ssh-keygen
+
+etc..
+
+and copy the ssh public key to the host machine authorized keys
+to check the connection
+
+ansible -m ping all
+*this should reply you pong*
+to configure hosts
+
+cd /etc/ansible/
+and then vi hosts
+
+example: 
+
+[host1]
+Public IP address of the host machine
+
+Write a YAML playbook
+*yml file present in the github*
+
+to run the playbook = ansible-playbook apache2.yml
+
+
+
+
